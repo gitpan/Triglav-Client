@@ -29,19 +29,24 @@ SYNOPSIS
 DESCRIPTION
     Triglav::Client is a Perl interface to Triglav API.
 
-    http://github.com/kentaro/triglav
+    <http://github.com/kentaro/triglav>
 
 CAVEAT
     This module is in alpha stage. You should be conscious about the changes
     of this module and API spec.
 
-AUTHOR
-    Kentaro Kuribayashi <kentarok@gmail.com>
+REPOSITORY
+    *   triglav-client-perl
+
+        <https://github.com/kentaro/triglav-client-perl>
 
 SEE ALSO
     *   Triglav
 
         <http://github.com/kentaro/triglav>
+
+AUTHOR
+    Kentaro Kuribayashi <kentarok@gmail.com>
 
 LICENSE
     Copyright (C) Kentaro Kuribayashi

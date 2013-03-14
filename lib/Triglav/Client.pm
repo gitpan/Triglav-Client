@@ -4,7 +4,7 @@ use warnings;
 use Carp qw(croak);
 
 use 5.008008;
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use URI;
 use URI::QueryParam;
@@ -62,7 +62,7 @@ sub hosts {
             else {
                 $_->{active}
             }
-        } map { $_->{host} } @$response
+        } @$response
     ];
 }
 
@@ -87,7 +87,7 @@ sub hosts_in {
             else {
                 $_->{active}
             }
-        } map { $_->{host} } @$response
+        } @$response
     ];
 }
 
@@ -166,16 +166,28 @@ Triglav::Client - A Perl Interface to Triglav API
 
 Triglav::Client is a Perl interface to Triglav API.
 
-http://github.com/kentaro/triglav
+L<http://github.com/kentaro/triglav>
 
 =head1 CAVEAT
 
 This module is in alpha stage. You should be conscious about the
 changes of this module and API spec.
 
-=head1 AUTHOR
+=head1 REPOSITORY
 
-Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>
+=over 4
+
+=item * triglav-client-perl
+
+L<https://github.com/kentaro/triglav-client-perl>
+
+=begin html
+
+<div><img src="https://secure.travis-ci.org/kentaro/triglav-client-perl.png"></div>
+
+=end html
+
+=back
 
 =head1 SEE ALSO
 
@@ -186,6 +198,10 @@ Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>
 L<http://github.com/kentaro/triglav>
 
 =back
+
+=head1 AUTHOR
+
+Kentaro Kuribayashi E<lt>kentarok@gmail.comE<gt>
 
 =head1 LICENSE
 
