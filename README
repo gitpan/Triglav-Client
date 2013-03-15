@@ -27,7 +27,8 @@ SYNOPSIS
       $client->hosts_in('sqale', 'users', with_inactive => 1);
 
 DESCRIPTION
-    Triglav::Client is a Perl interface to Triglav API.
+    Triglav is a server management tool. This module is a Perl interface to
+    its API.
 
     <http://github.com/kentaro/triglav>
 

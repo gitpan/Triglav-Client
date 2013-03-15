@@ -4,7 +4,7 @@ use warnings;
 use Carp qw(croak);
 
 use 5.008008;
-our $VERSION = '0.02';
+our $VERSION = '0.03';
 
 use URI;
 use URI::QueryParam;
@@ -27,27 +27,19 @@ sub new {
 sub ua { $_[0]->{ua} }
 
 sub services {
-    my $self     = shift;
-    my $response = $self->dispatch_request('get', '/api/services.json');
-
-    [ map { $_->{service} } @$response ];
+    my $self = shift;
+       $self->dispatch_request('get', '/api/services.json');
 }
 
 sub roles {
-    my $self     = shift;
-    my $response = $self->dispatch_request('get', '/api/roles.json');
-
-    [ map { $_->{role} } @$response ];
+    my $self = shift;
+       $self->dispatch_request('get', '/api/roles.json');
 }
 
 sub roles_in {
     my ($self, $service) = @_;
-
     croak '`service` is required' if !$service;
-
-    my $response = $self->dispatch_request('get', "/api/services/${service}/roles.json");
-
-    [ map { $_->{role} } @$response ];
+    $self->dispatch_request('get', "/api/services/${service}/roles.json");
 }
 
 sub hosts {
@@ -164,7 +156,8 @@ Triglav::Client - A Perl Interface to Triglav API
 
 =head1 DESCRIPTION
 
-Triglav::Client is a Perl interface to Triglav API.
+Triglav is a server management tool. This module is a Perl interface
+to its API.
 
 L<http://github.com/kentaro/triglav>
 
